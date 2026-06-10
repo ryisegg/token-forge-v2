@@ -2,7 +2,6 @@ services:
   - type: web
     name: tokens-forge-gateway
     runtime: docker
-    repo: https://github.com/ryisegg/tokens-forge-gateway
     plan: free
     region: oregon
     branch: main
