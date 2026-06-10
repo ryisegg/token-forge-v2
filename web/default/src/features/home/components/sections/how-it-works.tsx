@@ -26,24 +26,24 @@ export function HowItWorks() {
   const steps = [
     {
       num: '1',
-      title: t('Configure'),
+      title: t('Choose a package'),
       desc: t(
-        'Add your API keys, set up channels and configure access permissions'
+        'Pick the model family and token amount that matches your workflow.'
       ),
       icon: <Settings className='size-6' strokeWidth={1.5} />,
     },
     {
       num: '2',
-      title: t('Connect'),
+      title: t('Create a key'),
       desc: t(
-        'Connect through OpenAI, Claude, Gemini, and other compatible API routes'
+        'Generate a gateway key and use a familiar OpenAI-compatible base URL.'
       ),
       icon: <Zap className='size-6' strokeWidth={1.5} />,
     },
     {
       num: '3',
-      title: t('Monitor'),
-      desc: t('Track usage, costs and performance with real-time analytics'),
+      title: t('Track usage'),
+      desc: t('Monitor balance, requests, model routing, and spend in one place.'),
       icon: <BarChart3 className='size-6' strokeWidth={1.5} />,
     },
   ]
@@ -56,7 +56,7 @@ export function HowItWorks() {
             {t('How It Works')}
           </p>
           <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
-            {t('Three steps to get started')}
+            {t('Three steps from checkout to API traffic')}
           </h2>
         </AnimateInView>
 

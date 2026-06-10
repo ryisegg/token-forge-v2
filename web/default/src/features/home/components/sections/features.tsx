@@ -40,9 +40,9 @@ export function Features(_props: FeaturesProps) {
     {
       id: 'fast',
       num: '01',
-      title: t('Lightning Fast'),
+      title: t('Token packages'),
       desc: t(
-        'Optimized network architecture ensures millisecond response times'
+        'Sell model-specific prepaid packages for ChatGPT, Claude, and Gemini.'
       ),
       span: 'md:col-span-2',
       icon: <Zap className='size-4 text-blue-400' />,
@@ -64,9 +64,9 @@ export function Features(_props: FeaturesProps) {
     {
       id: 'secure',
       num: '02',
-      title: t('Secure & Reliable'),
+      title: t('Gateway keys'),
       desc: t(
-        'Enterprise-grade security with comprehensive permission management'
+        'Issue API keys with quota controls and account-level access rules.'
       ),
       span: 'md:col-span-1',
       icon: <Shield className='size-4 text-emerald-400' />,
@@ -101,8 +101,8 @@ export function Features(_props: FeaturesProps) {
     {
       id: 'global',
       num: '03',
-      title: t('Global Coverage'),
-      desc: t('Multi-region deployment for stable global access'),
+      title: t('Model routing'),
+      desc: t('Route traffic across configured upstream channels with fallback.'),
       span: 'md:col-span-1',
       icon: <Globe className='size-4 text-violet-400' />,
       visual: (
@@ -130,8 +130,8 @@ export function Features(_props: FeaturesProps) {
     {
       id: 'developer',
       num: '04',
-      title: t('Developer Friendly'),
-      desc: t('Compatible API routes for common AI application workflows'),
+      title: t('OpenAI compatible'),
+      desc: t('Connect existing apps without rewriting their API integration.'),
       span: 'md:col-span-2',
       icon: <Code className='size-4 text-amber-400' />,
       visual: (
@@ -148,7 +148,7 @@ export function Features(_props: FeaturesProps) {
           </div>
           <div className='text-muted-foreground flex items-center gap-1.5 text-xs'>
             <Code className='size-3.5 text-blue-500' />
-            {t('Multi-protocol Compatible')}
+            {t('One endpoint for common AI clients')}
           </div>
         </div>
       ),
@@ -158,23 +158,23 @@ export function Features(_props: FeaturesProps) {
   const additionalFeatures = [
     {
       icon: <Gauge className='size-5' strokeWidth={1.5} />,
-      title: t('High Performance'),
-      desc: t('Support for high concurrency with automatic load balancing'),
+      title: t('Usage ledger'),
+      desc: t('Track requests, token burn, and remaining balance.'),
     },
     {
       icon: <DollarSign className='size-5' strokeWidth={1.5} />,
-      title: t('Transparent Billing'),
-      desc: t('Pay-as-you-go with real-time usage monitoring'),
+      title: t('Stripe-ready'),
+      desc: t('Keep checkout and recharge flows ready for production billing.'),
     },
     {
       icon: <Users className='size-5' strokeWidth={1.5} />,
-      title: t('Team Collaboration'),
-      desc: t('Multi-user management with flexible permission allocation'),
+      title: t('User accounts'),
+      desc: t('Manage signups, balances, keys, and access from the console.'),
     },
     {
       icon: <HeartHandshake className='size-5' strokeWidth={1.5} />,
-      title: t('Open Source'),
-      desc: t('Community driven, self-hosted, and extensible'),
+      title: t('Operator control'),
+      desc: t('Own the gateway, pricing, model list, and customer experience.'),
     },
   ]
 
