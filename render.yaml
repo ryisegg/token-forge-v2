@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: token-forge-gateway
+    name: token-forge-v2
     runtime: docker
     plan: free
     region: oregon
@@ -14,18 +14,18 @@ services:
         value: 10000
       - key: SQL_DSN
         fromDatabase:
-          name: token-forge-gateway-db
+          name: token-forge-v2-db
           property: connectionString
       - key: LOG_SQL_DSN
         fromDatabase:
-          name: token-forge-gateway-db
+          name: token-forge-v2-db
           property: connectionString
       - key: SESSION_SECRET
         generateValue: true
       - key: CRYPTO_SECRET
         generateValue: true
       - key: NODE_NAME
-        value: token-forge-gateway-render
+        value: token-forge-v2-render
       - key: ERROR_LOG_ENABLED
         value: "true"
       - key: BATCH_UPDATE_ENABLED
@@ -36,9 +36,9 @@ services:
         value: UTC
 
 databases:
-  - name: token-forge-gateway-db
-    databaseName: token_forge_gateway
-    user: token_forge_gateway
+  - name: token-forge-v2-db
+    databaseName: token_forge_v2
+    user: token_forge_v2
     plan: free
     postgresMajorVersion: "15"
     ipAllowList: []
