@@ -21,7 +21,7 @@ For commercial licensing, please contact support@quantumnous.com
  */
 
 // System Configuration Defaults
-export const DEFAULT_SYSTEM_NAME = 'Token Forge V2'
+export const DEFAULT_SYSTEM_NAME = 'Tokens Forge'
 export const DEFAULT_LOGO = '/favicon.svg'
 
 // LocalStorage Keys

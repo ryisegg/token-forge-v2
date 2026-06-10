@@ -56,7 +56,7 @@ export function CTA(props: CTAProps) {
           {t('Ready to use')}
           <br />
           <span className='bg-gradient-to-r from-teal-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent'>
-            {t('Token Forge V2?')}
+            {t('Tokens Forge?')}
           </span>
         </h2>
         <p className='text-muted-foreground/80 mx-auto mt-5 max-w-md text-sm leading-relaxed md:text-base'>

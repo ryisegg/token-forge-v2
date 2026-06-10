@@ -117,7 +117,7 @@ export function Hero(props: HeroProps) {
             style={{ animationDelay: '120ms' }}
           >
             {t(
-              'Token Forge V2 combines model access, prepaid token packages, routing controls, and usage visibility in one OpenAI-compatible gateway.'
+              'Tokens Forge combines model access, prepaid token packages, routing controls, and usage visibility in one OpenAI-compatible gateway.'
             )}
           </p>
 
@@ -199,7 +199,7 @@ export function Hero(props: HeroProps) {
               <div className='mb-6 flex items-center justify-between'>
                 <div>
                   <p className='text-sm font-semibold text-white'>
-                    {t('Token Forge Route')}
+                    {t('Tokens Forge Route')}
                   </p>
                   <p className='mt-1 text-xs text-slate-400'>
                     {t('Package balance and model routing preview')}
