@@ -2,6 +2,7 @@ services:
   - type: web
     name: tokens-forge-gateway
     runtime: docker
+    repo: https://github.com/ryisegg/tokens-forge-gateway
     plan: free
     region: oregon
     branch: main
@@ -19,10 +20,6 @@ services:
       - key: LOG_SQL_DSN
         fromDatabase:
           name: tokens-forge-gateway-db
-          property: connectionString
-      - key: REDIS_CONN_STRING
-        fromDatabase:
-          name: tokens-forge-gateway-redis
           property: connectionString
       - key: SESSION_SECRET
         generateValue: true
@@ -45,9 +42,4 @@ databases:
     user: tokens_forge_gateway
     plan: free
     postgresMajorVersion: "15"
-    ipAllowList: []
-
-  - name: tokens-forge-gateway-redis
-    plan: free
-    maxmemoryPolicy: allkeys-lru
     ipAllowList: []
