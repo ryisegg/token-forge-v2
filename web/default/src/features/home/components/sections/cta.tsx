@@ -35,43 +35,43 @@ export function CTA(props: CTAProps) {
   }
 
   return (
-    <section className='relative z-10 overflow-hidden px-6 py-24 md:py-32'>
-      {/* Gradient mesh background */}
+    <section className='relative z-10 overflow-hidden px-6 py-24 text-white md:py-32'>
       <div
         aria-hidden
-        className='absolute inset-0 -z-10 opacity-20 dark:opacity-[0.08]'
+        className='absolute inset-x-0 top-0 -z-10 h-full opacity-60'
         style={{
-          background: [
-            'radial-gradient(ellipse 50% 50% at 30% 50%, oklch(0.7 0.15 250 / 70%) 0%, transparent 70%)',
-            'radial-gradient(ellipse 40% 40% at 70% 40%, oklch(0.65 0.12 200 / 50%) 0%, transparent 70%)',
-          ].join(', '),
+          background:
+            'linear-gradient(180deg, transparent, rgba(34,211,238,0.08) 45%, transparent)',
         }}
       />
 
       <AnimateInView
-        className='mx-auto max-w-2xl text-center'
+        className='tokens-forge-panel mx-auto max-w-2xl rounded-3xl px-6 py-12 text-center md:px-10'
         animation='scale-in'
       >
-        <h2 className='text-2xl leading-tight font-bold tracking-tight md:text-4xl'>
+        <h2 className='text-2xl leading-tight font-bold tracking-normal md:text-4xl'>
           {t('Ready to use')}
           <br />
           <span className='bg-gradient-to-r from-teal-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent'>
             {t('Tokens Forge?')}
           </span>
         </h2>
-        <p className='text-muted-foreground/80 mx-auto mt-5 max-w-md text-sm leading-relaxed md:text-base'>
+        <p className='mx-auto mt-5 max-w-md text-sm leading-relaxed text-slate-300 md:text-base'>
           {t(
             'Create an account, choose a token package, and connect your apps through one gateway key.'
           )}
         </p>
         <div className='mt-8 flex items-center justify-center gap-3'>
-          <Button className='group rounded-lg' render={<Link to='/sign-up' />}>
+          <Button
+            className='group rounded-full bg-cyan-300 text-slate-950 hover:bg-cyan-200'
+            render={<Link to='/sign-up' />}
+          >
             {t('Create account')}
             <ArrowRight className='ml-1 size-3.5 transition-transform duration-200 group-hover:translate-x-0.5' />
           </Button>
           <Button
             variant='outline'
-            className='border-border/50 hover:border-border hover:bg-muted/50 rounded-lg'
+            className='rounded-full border-white/10 bg-white/[0.04] text-slate-100 hover:border-cyan-300/40 hover:bg-white/[0.07]'
             render={<Link to='/pricing' />}
           >
             {t('View token packs')}

@@ -45,14 +45,14 @@ export function Features(_props: FeaturesProps) {
         'Sell model-specific prepaid packages for ChatGPT, Claude, and Gemini.'
       ),
       span: 'md:col-span-2',
-      icon: <Zap className='size-4 text-blue-400' />,
+      icon: <Zap className='size-4 text-cyan-300' />,
       visual: (
         <div className='mt-4 grid grid-cols-3 gap-2'>
           {['OpenAI', 'Claude', 'Gemini', 'DeepSeek', 'Qwen', 'Llama'].map(
             (name) => (
               <div
                 key={name}
-                className='border-border/30 bg-muted/20 text-muted-foreground flex items-center justify-center rounded-lg border px-3 py-2 text-xs transition-colors duration-300 hover:border-blue-500/30 hover:bg-blue-500/5'
+                className='flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.045] px-3 py-2 text-xs text-slate-300 transition-colors duration-300 hover:border-cyan-300/30 hover:bg-cyan-300/5'
               >
                 {name}
               </div>
@@ -113,14 +113,14 @@ export function Features(_props: FeaturesProps) {
                 <div
                   className={`flex size-6 items-center justify-center rounded-full text-[10px] font-bold ${
                     i === 1
-                      ? 'border border-blue-500/30 bg-blue-500/20 text-blue-500'
-                      : 'border-border/40 bg-muted text-muted-foreground border'
+                      ? 'border border-cyan-300/30 bg-cyan-300/15 text-cyan-200'
+                      : 'border border-white/10 bg-white/[0.045] text-slate-400'
                   }`}
                 >
                   {i + 1}
                 </div>
-                <div className='bg-border/40 h-px flex-1' />
-                <span className='text-muted-foreground text-xs'>{step}</span>
+                <div className='h-px flex-1 bg-white/10' />
+                <span className='text-xs text-slate-400'>{step}</span>
               </div>
             )
           )}
@@ -140,14 +140,14 @@ export function Features(_props: FeaturesProps) {
             {['API', 'SDK', 'CLI', 'Docs'].map((n) => (
               <div
                 key={n}
-                className='border-background from-muted to-muted/60 text-muted-foreground flex size-8 items-center justify-center rounded-full border-2 bg-gradient-to-br text-[9px] font-bold'
+                className='flex size-8 items-center justify-center rounded-full border border-white/10 bg-white/[0.045] text-[9px] font-bold text-slate-300'
               >
                 {n}
               </div>
             ))}
           </div>
-          <div className='text-muted-foreground flex items-center gap-1.5 text-xs'>
-            <Code className='size-3.5 text-blue-500' />
+          <div className='flex items-center gap-1.5 text-xs text-slate-400'>
+            <Code className='size-3.5 text-cyan-300' />
             {t('One endpoint for common AI clients')}
           </div>
         </div>
@@ -179,13 +179,13 @@ export function Features(_props: FeaturesProps) {
   ]
 
   return (
-    <section className='relative z-10 px-6 py-24 md:py-32'>
+    <section className='relative z-10 px-6 py-24 text-white md:py-32'>
       <div className='mx-auto max-w-6xl'>
         <AnimateInView className='mb-16 max-w-lg'>
-          <p className='text-muted-foreground mb-3 text-xs font-medium tracking-widest uppercase'>
+          <p className='mb-3 text-xs font-semibold tracking-normal text-cyan-300 uppercase'>
             {t('Core Features')}
           </p>
-          <h2 className='text-2xl leading-tight font-bold tracking-tight md:text-3xl'>
+          <h2 className='text-2xl leading-tight font-bold tracking-normal md:text-3xl'>
             {t('Built for developers,')}
             <br />
             {t('designed for scale')}
@@ -193,21 +193,21 @@ export function Features(_props: FeaturesProps) {
         </AnimateInView>
 
         {/* Bento grid */}
-        <div className='border-border/40 bg-border/40 grid gap-px overflow-hidden rounded-xl border md:grid-cols-3'>
+        <div className='grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3'>
           {features.map((f, i) => (
             <AnimateInView
               key={f.id}
               delay={i * 100}
               animation='scale-in'
-              className={`bg-background group hover:bg-muted/20 p-7 transition-colors duration-300 md:p-8 ${f.span}`}
+              className={`group bg-[#0d1018]/95 p-7 transition-colors duration-300 hover:bg-[#121722] md:p-8 ${f.span}`}
             >
               <div className='mb-3 flex items-center gap-3'>
-                <span className='border-border/40 bg-muted text-muted-foreground flex size-7 items-center justify-center rounded-md border text-[10px] font-semibold tabular-nums'>
+                <span className='flex size-7 items-center justify-center rounded-xl border border-white/10 bg-white/[0.045] text-[10px] font-semibold text-cyan-200 tabular-nums'>
                   {f.num}
                 </span>
                 <h3 className='text-sm font-semibold'>{f.title}</h3>
               </div>
-              <p className='text-muted-foreground text-sm leading-relaxed'>
+              <p className='text-sm leading-relaxed text-slate-400'>
                 {f.desc}
               </p>
               {f.visual}
@@ -224,11 +224,11 @@ export function Features(_props: FeaturesProps) {
               animation='fade-up'
               className='flex flex-col items-center text-center'
             >
-              <div className='text-muted-foreground border-border/50 bg-muted/30 group-hover:text-foreground mb-3 flex size-12 items-center justify-center rounded-xl border transition-colors'>
+              <div className='mb-3 flex size-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.045] text-cyan-200 transition-colors'>
                 {f.icon}
               </div>
               <h3 className='mb-1.5 text-sm font-semibold'>{f.title}</h3>
-              <p className='text-muted-foreground max-w-[200px] text-xs leading-relaxed'>
+              <p className='max-w-[200px] text-xs leading-relaxed text-slate-400'>
                 {f.desc}
               </p>
             </AnimateInView>

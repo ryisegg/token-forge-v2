@@ -49,13 +49,13 @@ export function HowItWorks() {
   ]
 
   return (
-    <section className='border-border/40 relative z-10 border-t px-6 py-24 md:py-32'>
+    <section className='relative z-10 border-t border-white/10 px-6 py-24 text-white md:py-32'>
       <div className='mx-auto max-w-6xl'>
         <AnimateInView className='mb-16 text-center md:mb-20'>
-          <p className='text-muted-foreground mb-3 text-xs font-medium tracking-widest uppercase'>
+          <p className='mb-3 text-xs font-semibold tracking-normal text-cyan-300 uppercase'>
             {t('How It Works')}
           </p>
-          <h2 className='text-2xl font-bold tracking-tight md:text-3xl'>
+          <h2 className='text-2xl font-bold tracking-normal md:text-3xl'>
             {t('Three steps from checkout to API traffic')}
           </h2>
         </AnimateInView>
@@ -69,15 +69,15 @@ export function HowItWorks() {
               className='relative flex flex-col items-center text-center'
             >
               <div className='relative mb-6'>
-                <div className='text-muted-foreground border-border/50 bg-muted/30 flex size-16 items-center justify-center rounded-2xl border transition-colors'>
+                <div className='flex size-16 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.045] text-cyan-200 transition-colors'>
                   {step.icon}
                 </div>
-                <div className='bg-foreground text-background absolute -top-2 -right-2 flex size-6 items-center justify-center rounded-full text-xs font-bold'>
+                <div className='absolute -top-2 -right-2 flex size-6 items-center justify-center rounded-full bg-cyan-300 text-xs font-bold text-slate-950'>
                   {step.num}
                 </div>
               </div>
               <h3 className='mb-2 text-base font-semibold'>{step.title}</h3>
-              <p className='text-muted-foreground max-w-[240px] text-sm leading-relaxed'>
+              <p className='max-w-[240px] text-sm leading-relaxed text-slate-400'>
                 {step.desc}
               </p>
             </AnimateInView>
